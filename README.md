@@ -11,6 +11,8 @@
 
 ## 📖 项目简介 (Introduction)
 
+Chinese
+
 本项目是一个运行在 **GitHub Actions** 上的无服务器（Serverless）自动化脚本。它旨在为金融从业者、量化交易员及开发者提供一份**零成本、高质量**的每日财经早报。
 
 **核心工作流：**
@@ -23,6 +25,19 @@
 * **极简配置**：抛弃复杂的数据库依赖，仅需修改 `config.json` 即可自定义新闻源和收件人。
 * **严谨溯源**：AI 生成的综述强制包含 `[ID]` 引用，点击可直达原始新闻链接，拒绝 AI 幻觉。
 * **环境自适应**：自动识别本地运行（Local）与云端运行（Cloud）环境。
+
+English
+
+This project is a serverless automation script running on **GitHub Actions**. It is designed to provide financial practitioners, quantitative traders, and developers with a **zero-cost, high-quality** daily financial morning briefing.
+**Core Workflow**:
+1.	**Data Ingestion**: Automatically fetches RSS data streams from mainstream global financial media (such as CNBC, TechCrunch, CoinDesk, Yahoo Finance, etc.).
+2.	**AI Quantitative Analysis**: Utilizes the **Google Gemini 2.5 Flash** long-context model to analyze news headlines, summarize macro trends, and output a market sentiment quantitative score ranging from **-10 (Extreme Fear) to +10 (Extreme Greed)**.
+3.	**Smart Distribution**: Generates a beautifully formatted HTML report and automatically pushes it to your inbox via an SMTP service.
+✨ **Key Features:**
+*	**Zero Run Cost**: Fully leverages the free tier of GitHub Actions combined with the free Gemini API.
+*	**Minimalist Configuration**: No complex database dependencies—simply modify config.json to customize your news sources and recipient list.
+*	**Rigorous Traceability**: Every AI-generated summary is strictly forced to include source citation tags ([ID]), which link directly to the original news article to eliminate AI hallucinations.
+*	**Environment Adaptive**: Automatically detects whether it is running in a local environment (Local) or cloud environment (Cloud).
 
 ## 📸 运行效果 (Demo)
 
@@ -74,9 +89,10 @@ pip install -r requirements.txt
 ### 3. 设置环境变量 (Secrets)
 
 为了安全起见，API Key 和邮箱密码**绝不能**直接写在代码里。
+For safety, API Key and email password definitely can't appear in the code.
 
-* **本地运行**：请确保系统环境变量中有以下值，或使用 `.env` 文件加载。
-* **GitHub Actions 运行**：请在仓库的 `Settings` -> `Secrets and variables` -> `Actions` 中添加以下 Secrets：
+* **本地运行（local）**：请确保系统环境变量中有以下值，或使用 `.env` 文件加载。
+* **GitHub Actions 运行（cloud）**：请在仓库的 `Settings` -> `Secrets and variables` -> `Actions` 中添加以下 Secrets：
 
 | Secret Name | 描述 | 获取方式 |
 | --- | --- | --- |
@@ -84,7 +100,7 @@ pip install -r requirements.txt
 | `SENDER_EMAIL` | 发件人邮箱 | 建议使用 163 或 Gmail |
 | `SENDER_PASSWORD` | SMTP 授权码 | 邮箱设置中开启 POP3/SMTP 获取 (非登录密码) |
 
-### 4. 运行脚本
+### 4. 运行脚本(run script)
 
 **本地测试：**
 
