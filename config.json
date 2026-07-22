@@ -1,11 +1,13 @@
 {
-  "rss_sources": {
-    "CNBC Finance": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664",
-    "TechCrunch": "https://techcrunch.com/feed/",
-    "CoinDesk": "https://www.coindesk.com/arc/outboundfeeds/rss/",
-    "Yahoo Finance": "https://finance.yahoo.com/news/rssindex"
-  },
-  "receivers": [
-    "your_email@example.com"
-  ]
+    "sender_email": "liyuangood556ha@163.com",
+    "receivers": [
+        "yuan97981@gmail.com"
+    ],
+    "rss_sources": {
+        "CNBC Finance": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664",
+        "TechCrunch": "https://techcrunch.com/feed/",
+        "CoinDesk": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+        "Yahoo Finance": "https://finance.yahoo.com/news/rssindex"
+    },
+    "summary_prompt": "根据下面新闻整理简洁的中欧时政简报，语言中文，条理清晰，剔除无关娱乐内容。"
 }
